@@ -1,0 +1,140 @@
+{
+  // =========================
+  // Editor Appearance
+  // =========================
+  "inlay_hints": {
+    "show_other_hints": false,
+    "show_parameter_hints": false,
+    "show_type_hints": false,
+    "show_value_hints": true
+  },
+  "ui_font_size": 16,
+  "buffer_font_size": null,
+
+  "buffer_font_features": {
+    "calt": false // ligatures
+  },
+  "lsp_document_colors": "border",
+  "wrap_guides": [79],
+  "show_edit_predictions": false,
+
+  // Theme & Colors
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "JetBrains New Dark"
+  },
+  "experimental.theme_overrides": {
+    "background.appearance": "transparent",
+    "syntax": {
+      "keyword": { "color": "#9D70FF" },
+      "function": { "color": "#BCBEC4" }
+    }
+  },
+
+  // =========================
+  // Editor Behavior
+  // =========================
+  "autosave": {
+    "after_delay": { "milliseconds": 500 }
+  },
+  "format_on_save": "on",
+  "restore_on_startup": "last_session",
+  "show_completions_on_input": true,
+
+  // =========================
+  // AI & Assistant Features
+  // =========================
+  "agent": {
+    "play_sound_when_agent_done": true,
+    "inline_assistant_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4-thinking"
+    },
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    }
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "enabled_in_text_threads": false,
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+
+  // =========================
+  // Git Integration
+  // =========================
+  "git": {
+    "inline_blame": { "enabled": false }
+  },
+
+  // =========================
+  // Language-Specific Settings
+  // =========================
+  "languages": {
+    "Python": {
+      "formatter": {
+        "external": {
+          "command": "black",
+          "arguments": ["-", "--skip-string-normalization"] 
+        }
+      },
+      "format_on_save": "on"
+    },
+    // Rust
+    "Rust": {
+      "formatter": {
+        "external": {
+          "command": "rustfmt",
+          "arguments": []
+        }
+      },
+      "format_on_save": "on"
+    }
+  },
+
+  // =========================
+  // LSP (Language Server Protocol) for Rust
+  // =========================
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "check": {
+          "command": "clippy" // rust-analyzer.check.command (default: "check")
+        },
+        "imports": {
+          "merge": { "glob": false },
+          "granularity": {
+            "enforce": true,
+            "group": "module"
+          }
+        },
+        "inlayHints": {
+          "maxLength": null,
+          "lifetimeElisionHints": {
+            "enable": "skip_trivial",
+            "useParameterNames": true
+          },
+          "closureReturnTypeHints": {
+            "enable": "always"
+          }
+        }
+      }
+    }
+  },
+
+  // =========================
+  // Privacy & Telemetry
+  // =========================
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}
