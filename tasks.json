@@ -1,0 +1,17 @@
+[
+  {
+    "label": "r/python",
+    "command": "python3",
+    "args": ["$ZED_FILE"],
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true
+  },
+  {
+    "label": "r/rust",
+    "command": "sh",
+    "args": ["-c", "clear; cargo run -q"],
+    "cwd": "$ZED_WORKTREE_ROOT/main",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": true
+  }
+]
