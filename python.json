@@ -1,0 +1,23 @@
+{
+  "Main entry point": {
+    "prefix": "mainentry",
+    "description": "Main function template",
+    "body": [
+      "def main() -> None:",
+      "    ${1:...}",
+      "",
+      "",
+      "if __name__ == '__main__':",
+      "    main()",
+      ""
+    ]
+  },
+  "Create a function": {
+    "prefix": "def",
+    "description": "Function template",
+    "body": [
+      "def ${1:new_function}($2) -> ${3:None}:",
+      "    ${4:raise NotImplementedError('$1() is not implemented.')}"
+    ]
+  }
+}
